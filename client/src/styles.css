@@ -1,0 +1,116 @@
+/* Container for the entire post list */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Heading styling */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading */
+}
+
+/* Button styling */
+.create-new-btn {
+  padding: 10px 20px;
+  margin: 20px auto; /* Center the button horizontally */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: block; /* Ensure the button behaves as a block element */
+}
+
+.create-new-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Grid layout for posts */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(350px, 1fr)
+  ); /* Two columns layout */
+  gap: 20px; /* Space between posts */
+}
+
+/* Styling for individual post items */
+.post-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Heading within the post item */
+.post-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Paragraph styling within the post item */
+.post-item p {
+  font-size: 1rem;
+  color: #333;
+  overflow-wrap: break-word; /* Break long words to prevent overflow */
+}
+
+/* Styling for actions within post item */
+.post-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Form styling for creating/editing posts */
+.post-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-form label {
+  font-weight: bold;
+}
+
+.post-form input,
+.post-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Styling for form actions (save/cancel buttons) */
+.post-form .form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.post-form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.post-form .cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
