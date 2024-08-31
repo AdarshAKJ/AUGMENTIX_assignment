@@ -9,7 +9,7 @@ const PostList = () => {
     const [creatingPost, setCreatingPost] = useState(false);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/posts')
+        axios.get('https://augmentix-assignment.vercel.app/api/posts')
             .then(response => setPosts(response.data))
             .catch(error => console.error(error));
     }, []);
@@ -58,7 +58,7 @@ const PostList = () => {
                         post={editingPost}
                         onSave={async (updatedPost) => {
                             const response = await axios.put(
-                                `http://localhost:5000/api/posts/${editingPost._id}`,
+                                `https://augmentix-assignment.vercel.app/${editingPost._id}`,
                                 updatedPost
                             );
                             handlePostUpdate(response.data);
@@ -69,7 +69,7 @@ const PostList = () => {
                     <PostForm
                         onSave={async (newPostData) => {
                             const response = await axios.post(
-                                'http://localhost:5000/api/posts',
+                                'https://augmentix-assignment.vercel.app/api/posts',
                                 newPostData
                             );
                             handlePostCreate(response.data);
